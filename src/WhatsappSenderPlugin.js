@@ -2,7 +2,7 @@ import React from 'react';
 import { FlexPlugin } from '@twilio/flex-plugin';
 
 // import CustomTaskList from './components/CustomTaskList/CustomTaskList';
-import MyCustomTaskInfoPanelItem from "./components/MyCustomTaskInfoPanelItem";
+// import MyCustomTaskInfoPanelItem from "./components/MyCustomTaskInfoPanelItem";
 import SimpleButtonContainer from './components/SimpleButton/SimpleButton.Container';
 
 const PLUGIN_NAME = 'WhatsappSenderPlugin';
@@ -21,7 +21,7 @@ export default class WhatsappSenderPlugin extends FlexPlugin {
   async init(flex, manager) {
     const options = { sortOrder: -1 };
     //flex.AgentDesktopView.Panel1.Content.add(<CustomTaskList key="WhatsappSenderPlugin-component" />, options);
-    flex.TaskInfoPanel.Content.add(<MyCustomTaskInfoPanelItem key="to-do-list"/>);
+    // flex.TaskInfoPanel.Content.add(<MyCustomTaskInfoPanelItem key="to-do-list"/>);
     flex.AgentDesktopView.Panel1.Content.add(
       <SimpleButtonContainer key="SimpleButton" />,
       { sortOrder: -1 }
